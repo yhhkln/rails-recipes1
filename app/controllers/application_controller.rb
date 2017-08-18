@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   before_action :set_timezone
   before_action :set_locale
   protect_from_forgery with: :exception
+  skip_before_filter :verify_authenticity_token
+
 
   def set_timezone
     if current_user && current_user.time_zone
