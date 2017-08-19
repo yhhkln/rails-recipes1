@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# 10.times{ |i| Category.create!( :name => "#{i} Category")}
+100.times{ |i| Category.create!( :name => "#{i+100} Category")}
