@@ -15,9 +15,16 @@
 		<%= f.label :email %>
 		<%= f.text_field :email, :class => "form-control" %>
 	</div>
-
+	<div class="form-group">
+		<%= f.label :group_ids %>
+		<%= f.select :group_ids, Group.all.map{ |g| [g.name, g.id] }, {}, :multiple => true, :class => "form-control" %>
+	</div>
 	<div class="form-group">
 		<%= f.submit "update", :class => "btn btn-primary" %>
 		<%= link_to "cancel", admin_users_path %>
 	</div>
 <% end %>
+
+<script>
+	$("#user_group_ids").select2()
+</script>
