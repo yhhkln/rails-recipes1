@@ -9,5 +9,5 @@ class User < ApplicationRecord
   end
 
   has_many :memberships
-  has_many :groups, :through => :membership
+  has_many :groups, :through => :memberships
 end
