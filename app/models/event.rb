@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  has_many :tickets, :dependent => :destroy
   belongs_to :category, :optional => true
   STATUS = ["draft", "public", "private"]
   validates_inclusion_of :status, :in => STATUS
