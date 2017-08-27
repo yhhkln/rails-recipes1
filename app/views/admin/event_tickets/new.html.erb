@@ -1,0 +1,10 @@
+<h1>new ticket</h1>
+<%= form_for [:admin, @event, @ticket] do |f| %>
+
+	<%= render :partial => "form", :locals => { :f => f} %>
+
+	<div class="form-gorup">
+		<%= f.submit "create", :class => "btn btn-primary" %>
+		<%= link_to "cancel", admin_event_tickets_path(@event) %>
+	</div>
+<% end %>
